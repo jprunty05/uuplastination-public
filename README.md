@@ -1,2 +1,2 @@
 # uuplastination
-i want to help people
+hold my beer, imma do smth cool
