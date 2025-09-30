@@ -1,62 +1,90 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Union University Plastination Lab</title>
-  <meta name="description" content="Projects, methods, and contact for Union University's plastination lab.">
-  <link rel="stylesheet" href="/assets/styles.css?v=1">
-  <link rel="icon" href="/assets/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UU Plastination — Public Site</title>
+  <meta name="description" content="Public website for UU Plastination." />
+  <style>
+    :root{
+      --bg:#0b0f14;--card:#121923;--muted:#A9B1BC;--text:#E9EEF4;--accent:#5CC8FF;--ok:#47D18C;--warn:#FFB54C;--danger:#FF6B6B;--border:#223041;
+      --public:#0B84FF;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7fbff; --card:#ffffff; --muted:#4A5A6A; --text:#0e1726; --accent:#0B84FF; --ok:#0EAD69; --warn:#C97700; --danger:#D93D3D; --border:#DFE7F1; --public:#0B84FF; }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{position:sticky;top:0;background:linear-gradient(180deg,rgba(0,0,0,.18),transparent),var(--bg);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid var(--border);z-index:10}
+    .wrap{max-width:1100px;margin:0 auto;padding:1rem}
+    .bar{display:flex;align-items:center;gap:.75rem;justify-content:space-between}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo{width:40px;height:40px;border-radius:10px;background:conic-gradient(from 200deg at 50% 50%, #0B84FF, #47D18C, #FFB54C, #0B84FF);box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    nav a{margin-left:1rem;font-weight:600}
+    .hero{padding:2.2rem 0;border-bottom:1px solid var(--border)}
+    h1{font-size:clamp(1.6rem,3.2vw,2.2rem);margin:.2rem 0 .6rem}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:1rem;margin:1.25rem 0 2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem}
+    .card h3{margin:.2rem 0 .6rem;font-size:1.05rem}
+    .pill{display:inline-flex;align-items:center;gap:.4rem;padding:.28rem .6rem;border-radius:999px;border:1px solid var(--border);font-size:.82rem}
+    .ok{color:var(--ok)} .warn{color:var(--warn)} .danger{color:var(--danger)}
+    .row{display:flex;gap:.75rem;flex-wrap:wrap}
+    ul.clean{list-style:none;padding:0;margin:.2rem 0}
+    ul.clean li{padding:.35rem 0;border-bottom:1px dashed var(--border)}
+    ul.clean li:last-child{border-bottom:none}
+    footer{border-top:1px solid var(--border);padding:1.25rem 0;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;border:1px solid var(--border);padding:.6rem .9rem;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(0,0,0,.02));text-decoration:none}
+    .btn:hover{transform:translateY(-1px)}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(127,127,127,.12);border:1px solid var(--border);border-bottom-width:2px;border-radius:8px;padding:.2rem .4rem}
+    .two{display:grid;gap:1rem;grid-template-columns:1.1fr .9fr}
+    @media (max-width:900px){.two{grid-template-columns:1fr}}
+    .note{font-size:.9rem;line-height:1.4}
+    .table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    .table th,.table td{padding:.6rem .7rem;border-bottom:1px solid var(--border);text-align:left}
+    .table tr:last-child td{border-bottom:none}
+    .tag{display:inline-block;padding:.16rem .5rem;border:1px solid var(--border);border-radius:999px;margin-right:.35rem;font-size:.78rem}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .banner{display:flex;align-items:center;gap:.6rem;border:1px solid var(--public);background:rgba(11,132,255,.08);padding:.55rem .8rem;border-radius:10px}
+    .banner strong{color:var(--public)}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="/">Plastination Lab</a>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/secure/">Secure</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Turning fragile tissue into durable teaching models</h1>
-        <p>Union University’s plastination lab replaces water in real specimens with silicone for long-lasting, hands-on learning.</p>
-        <a class="btn" href="#projects">See projects</a>
+<header>
+  <div class="wrap bar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <strong>UU Plastination</strong><br/>
+        <span class="muted" style="font-size:.9rem">Public Site</span>
       </div>
-    </section>
-
-    <section id="projects" class="container grid">
-      <article class="card">
-        <h3>Bubble Monitoring</h3>
-        <p>Automated bubble-rate detection with Raspberry Pi, vision, and PID vacuum control.</p>
-      </article>
-      <article class="card">
-        <h3>Process Control</h3>
-        <p>Repeatable acetone flushes and temperature-regulated vacuum cycles.</p>
-      </article>
-      <article class="card">
-        <h3>Student Research</h3>
-        <p>Multi-disciplinary projects integrating materials, fluids, and embedded systems.</p>
-      </article>
-    </section>
-
-    <section class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:jordan.prunty@my.uu.edu">jordan.prunty@my.uu.edu</a></p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Union University Plastination Lab</small>
     </div>
-  </footer>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/secure/">Secure Portal</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <script src="/assets/app.js?v=1"></script>
-</body>
-</html>
+<main class="wrap">
+  <section class="hero">
+    <div class="banner" role="status" aria-live="polite">
+      <span>🌐</span>
+      <strong>Public Area</strong>
+      <span class="muted">Don’t upload internal documents or sensitive data here.</span>
+    </div>
+
+    <div class="two" style="margin-top:1rem">
+      <div>
+        <h1>Welcome to UU Plastination</h1>
+        <p class="muted">
+          This is the public page. It gives a quick overview of what plastination is and what
+          our student-led lab is working on. Team members: use the <a href="/secure/">Secure Portal</a> for internal tools and files.
+        </p>
+        <div class="row" style="margin-top:.8rem">
+          <span class="pill ok">Status: Online</span>
+          <span class="pill">Public Build: <span class="mono">public-v1.0</span></span>
