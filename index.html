@@ -1,5 +1,116 @@
 ﻿<!doctype html>
-<html>
-  <head><meta charset='utf-8'><title>UU Public</title></head>
-  <body><h1>Public site AUTO DEPLOY test</h1></body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="UU Plastination — advanced 3D preservation and educational specimens." />
+    <title>UU Plastination</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#" aria-label="UU Plastination">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="6" fill="#0ea5a4" />
+            <path d="M7 15c1.5-3 3.5-6 6-6" stroke="#042f2e" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand">UU Plastination</span>
+        </a>
+
+        <nav class="nav">
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+          <a class="btn btn-primary" href="#contact">Get Started</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1 class="hero-title">Preserve specimens. Teach with clarity.</h1>
+            <p class="hero-lead">High-fidelity plastination and 3D preservation for research, education, and public exhibits. Durable, safe, and visually clear.</p>
+            <p class="hero-ctas">
+              <a class="btn btn-primary" href="#contact">Request a Quote</a>
+              <a class="btn btn-ghost" href="#features">See Features</a>
+            </p>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <div class="card">
+              <svg viewBox="0 0 640 360" class="placeholder-art" xmlns="http://www.w3.org/2000/svg" role="img">
+                <rect width="100%" height="100%" fill="url(#g)" rx="12" />
+                <defs>
+                  <linearGradient id="g" x1="0" x2="1">
+                    <stop offset="0" stop-color="#0ea5a4" />
+                    <stop offset="1" stop-color="#06b6d4" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <h2 class="section-title">What we offer</h2>
+          <p class="section-sub">Practical solutions for museums, labs, and institutions.</p>
+
+          <div class="grid">
+            <article class="feature">
+              <h3>Long-lasting preservation</h3>
+              <p>Specimens preserved to resist degradation while remaining anatomically accurate and safe to handle.</p>
+            </article>
+
+            <article class="feature">
+              <h3>3D clarity</h3>
+              <p>High-resolution imaging and sectioning provide clear, educational views for classrooms and research.</p>
+            </article>
+
+            <article class="feature">
+              <h3>Custom projects</h3>
+              <p>Tailored solutions — from single specimens to whole-collection programs with curation support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2>About UU Plastination</h2>
+          <p>We combine rigorous technique and modern materials to deliver specimens that retain structural detail, color, and tactile durability. Our goal is to make anatomy and natural history accessible and long-lived.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container contact-inner">
+          <div>
+            <h2>Ready to begin?</h2>
+            <p>Tell us about your project and we'll follow up with a proposal.</p>
+          </div>
+          <form class="contact-form" action="#" method="post" onsubmit="alert('This demo form does not submit.'); return false;">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="A short description of your project" rows="4" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> UU Plastination — All rights reserved.</p>
+        <small>Built with care in HTML & CSS • <a href="README.md">Project</a></small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
